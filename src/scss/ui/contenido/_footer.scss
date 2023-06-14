@@ -1,0 +1,30 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    padding: 2rem;
+    color: v.$blanco;
+    background-color: v.$primario;
+    text-align: center;
+
+    &__txt{
+        margin-top: 4rem;
+    }
+
+    &__rs{
+       padding: 1rem;
+       font-size: 1.8rem;
+       
+
+    }
+    &__svg{
+        width: 2rem;
+        
+    }
+    &__copy{
+        font-size: 1.5rem;
+        color: v.$blanco;
+        margin-top: 3rem;
+        padding: 0;
+    }
+}

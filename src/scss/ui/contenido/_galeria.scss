@@ -1,0 +1,79 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.galeria{
+    margin-bottom: 3rem;
+    &__heading{
+        margin-top: 5rem;
+        text-align: center;
+        font-weight: 900;
+    }
+
+
+    &__grid{
+        
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__opiniones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+.opinion{
+    display: flex;
+    justify-content: space-between;
+    background-color: v.$secundario;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 90%;
+
+
+    &__stars{
+        display: flex;
+        padding: 1rem;
+    }
+
+    &__img{
+        width: 2rem;
+        height: 2rem;
+        
+    }
+
+    &__texto{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    &:nth-child(1){
+        margin-left: 1rem;
+    }
+    &:nth-child(2){
+        margin-left: 2rem;
+    }
+    &:nth-child(3){
+        margin-left: 3rem;
+    }
+}
+
+.swiper-slide img {
+    width: 35.8rem; //Mobile 358x340
+    height: 34rem;       
+
+    @include m.tablet { 
+        width: 60rem; //Desktop 600x569
+        height: 56.9rem;
+    }
+    
+}
+
+

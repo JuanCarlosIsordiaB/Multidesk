@@ -1,0 +1,34 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.navegacion{
+    margin-top: 2rem;
+
+    @include m.tablet{
+        margin-top: 0;
+    }
+
+    &__link{
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        @include m.tablet { 
+            font-size: 2rem;
+            padding: 2rem;
+        }
+        &:hover{
+            background-color: darken(v.$grisClaro , 20%);
+            padding: 1.5rem;
+            color: v.$negro;
+            
+            @include m.tablet { 
+                padding: 2rem;
+            }
+            
+        }
+    }
+
+    
+
+
+}

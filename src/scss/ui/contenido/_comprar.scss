@@ -1,0 +1,52 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.comprar{
+    background-color: v.$secundario;
+    padding: 2rem;
+
+
+    &__grid{
+        @include m.tablet { 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__heading{
+        padding-top: 5rem;
+        text-align: center;
+    }
+
+    &__opcion{
+        background-color: v.$blanco;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+
+        &:nth-child(1){
+            margin-bottom: 2rem;
+
+            @include m.tablet { 
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__btn{
+        background-color: v.$primario;
+        padding: 2rem;
+        font-weight: 900;
+        border: 2px solid v.$primario;
+        transition: background-color 0.3s ease;
+        &:hover{
+            color: v.$negro;
+            background-color: v.$grisClaro;
+            
+        }
+    }
+}

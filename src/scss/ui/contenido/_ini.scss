@@ -1,0 +1,64 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.ini{
+    margin-top: 8rem;
+    @include m.tablet { 
+        margin-top: 0;
+        padding: 20rem;
+    }
+
+    &__grid{
+        
+        @include m.desktop{
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           
+        }
+    }
+
+    &__txt{
+        
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__heading{
+        max-width: 85%;
+        font-weight: 100;
+        margin: 0;
+        @include m.tablet { 
+            font-size: 5.5rem;
+            
+        }
+        span{
+            font-weight: 700;
+        }
+    }
+
+    &__desc{
+        max-width: 80%;
+        color:  v.$negro;
+        line-height: 1.4;
+    }
+
+    &__btn{
+        background-color: v.$primario;
+        padding: 2rem;
+        font-weight: 900;
+        max-width: 35%;
+        border: 2px solid v.$primario;
+        transition: background-color 0.3s ease;
+        &:hover{
+            color: v.$negro;
+            background-color: v.$grisClaro;
+            
+        }
+    }
+
+    
+}
